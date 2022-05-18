@@ -1,0 +1,73 @@
+    @import url('https://fonts.googleapis.com/css2?family=Alice&family=Roboto:wght@100&family=Source+Serif+Pro:wght@300&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .container-grid {
+        display: flex;
+        justify-content: space-between;
+        width: 1200px;
+        height: 100%;
+        margin: auto;
+        align-items: center;
+    }
+    
+    .logo {
+        height: 130px;
+    }
+    
+    .menu {
+        width: 660px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .menu a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        font-family: 'Roboto';
+        font-size: 20px;
+    }
+    
+    header {
+        background-color: #1E1C21;
+        height: 130px;
+    }
+    
+    .banner {
+        background-image: url(../img/KyobiGames.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 650px;
+    }
+    
+    .texto-banner a {
+        background-color: #C31616;
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        padding: 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 40px;
+    }
+    
+    .barras {
+        width: 30px;
+        display: none;
+    }
+    
+    @media screen and (max-width: 768px) {
+        h1 {
+            color: blue;
+        }
+        .barras {
+            display: inline-block;
+        }
+        .menu {
+            display: none;
+        }
+    }
