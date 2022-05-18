@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alice&family=Roboto:wght@100&family=Source+Serif+Pro:wght@300&display=swap" rel="stylesheet">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 </head>
 
@@ -18,10 +20,10 @@
             <a href="">
                 <img class="logo" src="img/GAME_MANIA-removebg-preview.png" alt="">
             </a>
-            <a href="#">
+            <a href="#" onclick=mostrarMenu()>
                 <img class="barras" src="img/bars.svg" alt="">
             </a>
-            <nav class="menu">
+            <nav id="menu" class="menu">
                 <a href="">Início</a>
                 <a href="">Lançamentos</a>
                 <a href="">Eletrônicos</a>
@@ -38,6 +40,19 @@
             </div>
         </div>
     </div>
+    <!--Link do JS do Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script>
+        let menu = document.getElementById("menu")
+
+        function mostrarMenu() {
+            if (menu.style.display == "none") {
+                menu.style.display = "flex"
+            } else {
+                menu.style.display = "none"
+            }
+        }
+    </script>
 
 </body>
 
