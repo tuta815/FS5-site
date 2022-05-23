@@ -30,6 +30,7 @@
         text-transform: uppercase;
         font-family: 'Roboto';
         font-size: 20px;
+        margin: auto;
     }
     
     header {
@@ -52,7 +53,7 @@
     }
     
     .texto-banner a {
-        background-color: #C31616;
+        background-color: blue;
         text-decoration: none;
         color: white;
         text-transform: uppercase;
@@ -62,9 +63,144 @@
         font-size: 40px;
     }
     
+    .texto-banner a:hover {
+        padding: 25px;
+        font-size: 45px;
+        transition-duration: 100ms;
+        background-color: #C31616;
+        color: black;
+    }
+    
     .barras {
         width: 30px;
         display: none;
+    }
+    
+    footer {
+        background-color: rgb(0, 0, 0);
+    }
+    
+    .rodape {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .links-footer {
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+    }
+    
+    .links h2 {
+        color: white;
+    }
+    
+    .links a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    
+    .logo-rodape {
+        width: 250px;
+        margin-top: -25px;
+    }
+    
+    .logo-twitter {
+        width: 47px;
+    }
+    
+    .siga-nos {
+        display: flex;
+        margin-top: 30px;
+    }
+    
+    .siga-nos h2 {
+        font-size: 14px;
+    }
+    
+    .sociais h2 {
+        color: white;
+        font-size: 14px;
+        margin: 10px;
+    }
+    
+    .sociais form {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    
+    .sociais input[type="email"]::placeholder {
+        color: #B8B3b3;
+        font-weight: bold;
+    }
+    
+    .botao-cadastrar {
+        width: 156px;
+        color: white;
+        background-color: #2633ef;
+        justify-content: space-between;
+        padding: 0.3em;
+    }
+    
+    .botao-cadastrar:hover {
+        background-color: #f80000;
+        color: white;
+    }
+    
+    .secao-noticias {
+        background-color: #1E1C21;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .secao-noticias .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .bloco-noticias {
+        color: white;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .bloco-noticias h2 {
+        background: blue;
+        font-size: 25px;
+        width: 100px;
+        justify-content: center;
+        margin: auto;
+    }
+    
+    .content-news {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cardnews {
+        width: 240px;
+        height: 360px;
+        color: #fff;
+        margin: 32px;
+        background: var(--gradient);
+        box-shadow: 0px 0px 10px green, 0px 0px 30px blue;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cardnews h3 {
+        padding-left: 20px;
+        padding-top: 5px;
+        font-size: 24px;
+    }
+    
+    .cardnews p {
+        padding-left: 20px;
+        font-size: 16px;
     }
     
     @media screen and (max-width: 768px) {
