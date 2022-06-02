@@ -1,41 +1,82 @@
-let listaNoticias = [{
-        titulo: "Brasil começa a vender terrenos na lua",
-        descricao: "tem gente vendendo terreno na lua nesse pais de louco"
+$(document).ready(function() {
+
+    $("#carrossel img:eq(0)").addClass("banner-ativo").show()
+
+    setInterval(slide, 3000)
+
+    function slide() {
+        if ($(".banner-ativo").next().length) {
+            $(".banner-ativo").removeClass("banner-ativo").hide().next().addClass("banner-ativo").show()
+        } else {
+            $(".banner-ativo").removeClass().hide()
+            $("#carrossel img:eq(0)").addClass("banner-ativo").show()
+        }
+    }
+
+    $("#barras").click(function() {
+        $("#menu").toggleClass("menu-ativo")
+            // if ($("#menu").hasClass("menu-ativo")) {
+            //     $("#menu").removeClass("menu-ativo")
+            // } else {
+            //     $("#menu").addClass("menu-ativo")
+            // }
+
+    })
+})
+
+
+
+
+let listaProdutos = [{
+        foto: "img/notebook.png",
+        titulo: "Macbook Pro",
+        preco: "R$ 10.000,00",
+        descricao: "Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz malandris se pirulitá."
     },
     {
-        titulo: "Tenho sono",
+        foto: "img/headphone.png",
+        titulo: "Headphone",
+        preco: "R$ 10.000,00",
         descricao: "Dormi muito tarde e acordei muito cedo"
     },
     {
-        titulo: "O dolar esta alto",
+        foto: "img/tv.png",
+        titulo: "Smart TV",
+        preco: "R$ 10.000,00",
         descricao: "não é novidade mas temos que noticiair"
     },
     {
-        titulo: "desça dai",
+        foto: "img/ps5.png",
+        titulo: "Controle PS5",
+        preco: "R$ 10.000,00",
         descricao: "jacaré no seco anda"
     },
     {
-        titulo: "Compra de NFT aumenta no Brasil",
+        foto: "img/xbox.png",
+        titulo: "XBOX ONE",
+        preco: "R$ 10.000,00",
         descricao: "Por causa dos joguinhos que usam nft"
     },
     {
-        titulo: "Ta frio mas ta calor tambem",
+        foto: "img/imac.png",
+        titulo: "IMAC",
+        preco: "R$ 10.000,00",
         descricao: "tem lugar que ta frio e tem lugar que ta calor"
     }
 ]
 
-function renderizarNoticias() {
-    let espaco = document.getElementById("espaco-noticias")
+function renderizarDestaques() {
+    let espaco = document.getElementById("espaco-destaques")
 
     let template = "";
 
 
 
-    for (let index = 0; index < listaNoticias.length; index++) {
-        const noticia = listaNoticias[index];
+    for (let index = 0; index < listaProdutos.length; index++) {
+        const destaques = listaProdutos[index];
 
         template += `
-      <div class="cardnews"><img src="img/cardnews.jpg" alt="#"> <h3>${noticia.titulo}</h3> <p>${noticia.descricao}</p> </div >
+      <div class="highlights"><a href=""><img src=${destaques.foto} alt="#"> <h5>${destaques.titulo}</h5> <h4>${destaques.preco}</h4></a> <p>${destaques.descricao}</p> </div >
       `
 
     }
