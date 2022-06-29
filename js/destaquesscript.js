@@ -1,13 +1,13 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
 
-    $("#barras").click(function() {
+    $("#barras").click(function () {
         $("#menu").toggleClass("menu-ativo")
-            // if ($("#menu").hasClass("menu-ativo")) {
-            //     $("#menu").removeClass("menu-ativo")
-            // } else {
-            //     $("#menu").addClass("menu-ativo")
-            // }
+        // if ($("#menu").hasClass("menu-ativo")) {
+        //     $("#menu").removeClass("menu-ativo")
+        // } else {
+        //     $("#menu").addClass("menu-ativo")
+        // }
 
     })
 })
@@ -16,77 +16,77 @@ $(document).ready(function() {
 
 
 let listaProdutos = [{
-        foto: "../img/notebook.png",
-        titulo: "Macbook Pro",
-        preco: "R$ 10.000,00",
-        descricao: "Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz malandris se pirulitá."
-    },
-    {
-        foto: "../img/headphone.png",
-        titulo: "Headphone",
-        preco: "R$ 10.000,00",
-        descricao: "Dormi muito tarde e acordei muito cedo"
-    },
-    {
-        foto: "../img/tv.png",
-        titulo: "Smart TV",
-        preco: "R$ 10.000,00",
-        descricao: "não é novidade mas temos que noticiair"
-    },
-    {
-        foto: "../img/ps5.png",
-        titulo: "Controle PS5",
-        preco: "R$ 10.000,00",
-        descricao: "jacaré no seco anda"
-    },
-    {
-        foto: "../img/xbox.png",
-        titulo: "XBOX ONE",
-        preco: "R$ 10.000,00",
-        descricao: "Por causa dos joguinhos que usam nft"
-    },
-    {
-        foto: "../img/imac.png",
-        titulo: "IMAC",
-        preco: "R$ 10.000,00",
-        descricao: "tem lugar que ta frio e tem lugar que ta calor"
-    },
-    {
-        foto: "../img/notebook.png",
-        titulo: "Macbook Pro",
-        preco: "R$ 10.000,00",
-        descricao: "Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz malandris se pirulitá."
-    },
-    {
-        foto: "../img/headphone.png",
-        titulo: "Headphone",
-        preco: "R$ 10.000,00",
-        descricao: "Dormi muito tarde e acordei muito cedo"
-    },
-    {
-        foto: "../img/tv.png",
-        titulo: "Smart TV",
-        preco: "R$ 10.000,00",
-        descricao: "não é novidade mas temos que noticiair"
-    },
-    {
-        foto: "../img/ps5.png",
-        titulo: "Controle PS5",
-        preco: "R$ 10.000,00",
-        descricao: "jacaré no seco anda"
-    },
-    {
-        foto: "../img/xbox.png",
-        titulo: "XBOX ONE",
-        preco: "R$ 10.000,00",
-        descricao: "Por causa dos joguinhos que usam nft"
-    },
-    {
-        foto: "../img/imac.png",
-        titulo: "IMAC",
-        preco: "R$ 10.000,00",
-        descricao: "tem lugar que ta frio e tem lugar que ta calor"
-    }
+    foto: "../img/notebook.png",
+    titulo: "Macbook Pro",
+    preco: 10000,
+    descricao: "Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz malandris se pirulitá."
+},
+{
+    foto: "../img/headphone.png",
+    titulo: "Headphone",
+    preco: 10000,
+    descricao: "Dormi muito tarde e acordei muito cedo"
+},
+{
+    foto: "../img/tv.png",
+    titulo: "Smart TV",
+    preco: 10000,
+    descricao: "não é novidade mas temos que noticiair"
+},
+{
+    foto: "../img/ps5.png",
+    titulo: "Controle PS5",
+    preco: 10000,
+    descricao: "jacaré no seco anda"
+},
+{
+    foto: "../img/xbox.png",
+    titulo: "XBOX ONE",
+    preco: 10000,
+    descricao: "Por causa dos joguinhos que usam nft"
+},
+{
+    foto: "../img/imac.png",
+    titulo: "IMAC",
+    preco: 10000,
+    descricao: "tem lugar que ta frio e tem lugar que ta calor"
+},
+{
+    foto: "../img/notebook.png",
+    titulo: "Macbook Pro",
+    preco: 10000,
+    descricao: "Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz malandris se pirulitá."
+},
+{
+    foto: "../img/headphone.png",
+    titulo: "Headphone",
+    preco: 10000,
+    descricao: "Dormi muito tarde e acordei muito cedo"
+},
+{
+    foto: "../img/tv.png",
+    titulo: "Smart TV",
+    preco: 10000,
+    descricao: "não é novidade mas temos que noticiair"
+},
+{
+    foto: "../img/ps5.png",
+    titulo: "Controle PS5",
+    preco: 10000,
+    descricao: "jacaré no seco anda"
+},
+{
+    foto: "../img/xbox.png",
+    titulo: "XBOX ONE",
+    preco: 10000,
+    descricao: "Por causa dos joguinhos que usam nft"
+},
+{
+    foto: "../img/imac.png",
+    titulo: "IMAC",
+    preco: 10000,
+    descricao: "tem lugar que ta frio e tem lugar que ta calor"
+}
 
 ]
 
@@ -95,13 +95,15 @@ function renderizarDestaques() {
 
     let template = "";
 
-
+    function formatReal(amount) {
+        return Intl.NumberFormat('pt-br', { style: 'currency', currency: 'BRL' }).format(amount);
+    }
 
     for (let index = 0; index < listaProdutos.length; index++) {
         const destaques = listaProdutos[index];
 
         template += `
-      <div class="highlights"><a href=""><img src=${destaques.foto} alt="#"> <h5>${destaques.titulo}</h5> <h4>${destaques.preco}</h4></a> <p>${destaques.descricao}</p> </div >
+      <div class="highlights"><a href=""><img src=${destaques.foto} alt="#"> </a> <div class="destaque"> <h5>${destaques.titulo}</h5> <h4>${formatReal(destaques.preco)}</h4> <p>${destaques.descricao}</p></div > </div >
       `
 
     }
